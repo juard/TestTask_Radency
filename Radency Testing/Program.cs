@@ -37,7 +37,7 @@ namespace Radency_Testing
             {
                 newstr.Append(num + " "); //записуємо в стрічку значення кожного елементу відсортованої колекції Ordered
             }
-
+            newstr.Remove(newstr.Length - 1, 1);
             return newstr.ToString();//повертаємо відсортовану стрічку
         }
 
