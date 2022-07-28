@@ -9,12 +9,14 @@ namespace Radency_Testing
     {
         static void Main(string[] args)
         {
+            var s = Order("");
+            string v = Order(null);
+            Console.ReadKey();
         }
 
         public static string Order(string input)
         {
-
-            if (input is null) return input; // якщо стрічка пуста, вертаємо пусту стрічку
+            if (string.IsNullOrEmpty(input)) return String.Empty; // якщо стрічка пуста, вертаємо пусту стрічку
             string[] Subs = input.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToArray(); //розбиваємо стрічку на окремі "числа" та видаляємо пробіли
 
             var Orders = new Dictionary<int, List<string>>(); //створюємо словник, в якому ключ є сумою цифр числа, а значення - список чисел, які відповідають сумі
